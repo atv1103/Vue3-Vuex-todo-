@@ -1,7 +1,7 @@
 <template>
     <div class="filters">
       <button
-        v-for="option in ['all', 'active', 'completed']"
+        v-for="option in ['all', 'active', 'completed'] as const"
         :key="option"
         @click="setFilter(option)"
         :class="{ active: currentFilter === option }"
